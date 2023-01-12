@@ -14,6 +14,8 @@
 		C6FC44AF29709EE500D3FA46 /* ContactsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44AD29709EE400D3FA46 /* ContactsDataModel.xcdatamodeld */; };
 		C6FC44B22970A02C00D3FA46 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B12970A02C00D3FA46 /* Contact.swift */; };
 		C6FC44B52970A1BD00D3FA46 /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B42970A1BD00D3FA46 /* ContactsProvider.swift */; };
+		C6FC44B72970A81A00D3FA46 /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */; };
+		C6FC44B92970A8D600D3FA46 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		C6FC44AE29709EE500D3FA46 /* ContactsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C6FC44B12970A02C00D3FA46 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		C6FC44B42970A1BD00D3FA46 /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
+		C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
+		C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				C6FC44AD29709EE400D3FA46 /* ContactsDataModel.xcdatamodeld */,
 				C6FC44B02970A02200D3FA46 /* Model */,
 				C6FC44A129706F6700D3FA46 /* ContentView.swift */,
+				C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */,
+				C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */,
 				C6FC44A329706F6B00D3FA46 /* Assets.xcassets */,
 				C6FC44A529706F6B00D3FA46 /* Preview Content */,
 			);
@@ -164,8 +170,10 @@
 			files = (
 				C6FC44B22970A02C00D3FA46 /* Contact.swift in Sources */,
 				C6FC44B52970A1BD00D3FA46 /* ContactsProvider.swift in Sources */,
+				C6FC44B92970A8D600D3FA46 /* ContactDetailView.swift in Sources */,
 				C6FC44AF29709EE500D3FA46 /* ContactsDataModel.xcdatamodeld in Sources */,
 				C6FC44A229706F6700D3FA46 /* ContentView.swift in Sources */,
+				C6FC44B72970A81A00D3FA46 /* ContactRowView.swift in Sources */,
 				C6FC44A029706F6700D3FA46 /* CoreDataContactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
