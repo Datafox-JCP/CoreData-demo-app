@@ -16,6 +16,7 @@
 		C6FC44B52970A1BD00D3FA46 /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B42970A1BD00D3FA46 /* ContactsProvider.swift */; };
 		C6FC44B72970A81A00D3FA46 /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */; };
 		C6FC44B92970A8D600D3FA46 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */; };
+		C6FC44BB2970AACE00D3FA46 /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44BA2970AACE00D3FA46 /* CreateContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C6FC44B42970A1BD00D3FA46 /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
 		C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
 		C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		C6FC44BA2970AACE00D3FA46 /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				C6FC44A129706F6700D3FA46 /* ContentView.swift */,
 				C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */,
 				C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */,
+				C6FC44BA2970AACE00D3FA46 /* CreateContactView.swift */,
 				C6FC44A329706F6B00D3FA46 /* Assets.xcassets */,
 				C6FC44A529706F6B00D3FA46 /* Preview Content */,
 			);
@@ -173,6 +176,7 @@
 				C6FC44B92970A8D600D3FA46 /* ContactDetailView.swift in Sources */,
 				C6FC44AF29709EE500D3FA46 /* ContactsDataModel.xcdatamodeld in Sources */,
 				C6FC44A229706F6700D3FA46 /* ContentView.swift in Sources */,
+				C6FC44BB2970AACE00D3FA46 /* CreateContactView.swift in Sources */,
 				C6FC44B72970A81A00D3FA46 /* ContactRowView.swift in Sources */,
 				C6FC44A029706F6700D3FA46 /* CoreDataContactsApp.swift in Sources */,
 			);

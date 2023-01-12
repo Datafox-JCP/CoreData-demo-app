@@ -1,14 +1,16 @@
-//
-//  ContentView.swift
-//  CoreDataContacts
-//
-//  Created by Juan Hernandez Pazos on 12/01/23.
-//
+    //
+    //  ContentView.swift
+    //  CoreDataContacts
+    //
+    //  Created by Juan Hernandez Pazos on 12/01/23.
+    //
 
 import SwiftUI
 
 struct ContentView: View {
-
+    
+    @State private var isShowingNewContact = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -20,6 +22,21 @@ struct ContentView: View {
                         .opacity(0)
                         ContactRowView()
                     }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        isShowingNewContact.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                            .font(.title2)
+                    }
+                }
+            }
+            .sheet(isPresented: $isShowingNewContact) {
+                NavigationStack {
+                    CreateContactView()
                 }
             }
             .navigationTitle("Contacts")
