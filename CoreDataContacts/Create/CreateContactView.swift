@@ -38,7 +38,7 @@ struct CreateContactView: View {
                           axis: .vertical)
             }
         }
-        .navigationTitle("Name Here")
+        .navigationTitle(vm.isNew ? "Add new contact" : "Update contact")
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
