@@ -21,6 +21,10 @@ final class Contact: NSManagedObject, Identifiable {
         Calendar.current.isDateInToday(dob)
     }
     
+    var formattedName: String {
+        "\(isBirthday ? "🎈" : "")\(name)"
+    }
+    
     override func awakeFromInsert() {
         super.awakeFromInsert()
         

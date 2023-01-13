@@ -15,7 +15,7 @@ struct ContactRowView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("\(contact.isBirthday ? "🎈" : "")\(contact.name)")
+            Text("\(contact.formattedName)")
                 .font(.system(size: 26, design: .rounded).bold())
             
             Text(contact.email)
