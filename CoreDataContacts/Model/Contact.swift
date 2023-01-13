@@ -53,8 +53,13 @@ extension Contact {
         return request
     }
     
-    static func filter(_ query: String) -> NSPredicate {
-        query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@", query)
+    static func filter(width config: SearchConfig) -> NSPredicate {
+        switch config.filter {
+        case .all:
+            return config.query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@", config.query)
+        case .fav:
+            return config.query.isEmpty ? NSPredicate(format: "isFavorite == %@", NSNumber(value: true)) : NSPredicate(format: "name CONTAINS[cd] %@ AND isFavorite == %@", config.query, NSNumber(value: true))
+        }
     }
 }
 

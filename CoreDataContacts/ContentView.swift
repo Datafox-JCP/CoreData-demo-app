@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct SearchConfig: Equatable {
+    
+    enum Filter {
+        case all, fav
+    }
+    
     var query: String = ""
+    var filter: Filter = .all
 }
 
 struct ContentView: View {
@@ -60,11 +66,29 @@ struct ContentView: View {
             }
             .searchable(text: $searchConfig.query)
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         contactToEdit = .empty(context: provider.newContext)
                     } label: {
                         Image(systemName: "plus")
+                            .font(.title2)
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Section {
+                            Text("Filter")
+                            Picker(selection: $searchConfig.filter) {
+                                Text("All").tag(SearchConfig.Filter.all)
+                                Text("Favorites").tag(SearchConfig.Filter.fav)
+                            } label: {
+                                Text("Filter Favorites")
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis")
+                            .symbolVariant(.circle)
                             .font(.title2)
                     }
                 }
@@ -77,8 +101,8 @@ struct ContentView: View {
                 }
             })
             .navigationTitle("Contacts")
-            .onChange(of: searchConfig) { newValue in
-                contacts.nsPredicate = Contact.filter(newValue.query)
+            .onChange(of: searchConfig) { newConfig in
+                contacts.nsPredicate = Contact.filter(width: newConfig)
             }
         }
     }
