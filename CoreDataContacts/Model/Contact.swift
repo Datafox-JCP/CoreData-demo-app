@@ -17,6 +17,12 @@ final class Contact: NSManagedObject, Identifiable {
     @NSManaged var email: String
     @NSManaged var isFavorite: Bool
     
+    var isValid: Bool {
+        !name.isEmpty &&
+        !phoneNumber.isEmpty &&
+        !email.isEmpty
+    }
+    
     var isBirthday: Bool {
         Calendar.current.isDateInToday(dob)
     }

@@ -33,7 +33,7 @@ struct ContentView: View {
                                     .swipeActions(allowsFullSwipe: true) {
                                         Button(role: .destructive) {
                                             do {
-                                                try provider.delete(contact, in: provider.viewContext)
+                                                try provider.delete(contact, in: provider.newContext)
                                             } catch {
                                                 print(error)
                                             }
