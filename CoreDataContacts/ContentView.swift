@@ -7,13 +7,16 @@
 
 import SwiftUI
 
+struct SearchConfig: Equatable {
+    var query: String = ""
+}
+
 struct ContentView: View {
     
-//    @State private var isShowingNewContact = false
     @FetchRequest(fetchRequest: Contact.all()) private var contacts
     
     @State private var contactToEdit: Contact?
-    
+    @State private var searchConfig: SearchConfig = .init()
     var provider = ContactsProvider.shared
     
     var body: some View {
@@ -55,6 +58,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .searchable(text: $searchConfig.query)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -73,23 +77,12 @@ struct ContentView: View {
                 }
             })
             .navigationTitle("Contacts")
+            .onChange(of: searchConfig) { newValue in
+                contacts.nsPredicate = Contact.filter(newValue.query)
+            }
         }
     }
 }
-
-//extension ContentView {
-//
-//    func delete(_ contact: Contact) throws {
-//        let context = provider.viewContext
-//        let existingContact = try context.existingObject(with: contact.objectID)
-//        context.delete(existingContact)
-//        Task(priority: .background) {
-//            try await context.perform {
-//                try context.save()
-//            }
-//        }
-//    }
-//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

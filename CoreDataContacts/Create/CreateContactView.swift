@@ -55,7 +55,7 @@ struct CreateContactView: View {
             }
         }
         .alert("Something is wrong", isPresented: $hasError, actions: {}) {
-            Text("It's looks like your form is invalid")
+            Text("👀 It's looks like your form is invalid 👀")
         }
     }
 }
