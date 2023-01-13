@@ -18,6 +18,7 @@
 		C6FC44B92970A8D600D3FA46 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */; };
 		C6FC44BB2970AACE00D3FA46 /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44BA2970AACE00D3FA46 /* CreateContactView.swift */; };
 		C6FC44BE2970AD1D00D3FA46 /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44BD2970AD1D00D3FA46 /* EditContactViewModel.swift */; };
+		C6FC44C0297109CC00D3FA46 /* NoContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC44BF297109CC00D3FA46 /* NoContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		C6FC44BA2970AACE00D3FA46 /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
 		C6FC44BD2970AD1D00D3FA46 /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
+		C6FC44BF297109CC00D3FA46 /* NoContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				C6FC44AD29709EE400D3FA46 /* ContactsDataModel.xcdatamodeld */,
 				C6FC44B02970A02200D3FA46 /* Model */,
 				C6FC44A129706F6700D3FA46 /* ContentView.swift */,
+				C6FC44BF297109CC00D3FA46 /* NoContactView.swift */,
 				C6FC44B62970A81A00D3FA46 /* ContactRowView.swift */,
 				C6FC44B82970A8D600D3FA46 /* ContactDetailView.swift */,
 				C6FC44A329706F6B00D3FA46 /* Assets.xcassets */,
@@ -190,6 +193,7 @@
 				C6FC44A229706F6700D3FA46 /* ContentView.swift in Sources */,
 				C6FC44BB2970AACE00D3FA46 /* CreateContactView.swift in Sources */,
 				C6FC44B72970A81A00D3FA46 /* ContactRowView.swift in Sources */,
+				C6FC44C0297109CC00D3FA46 /* NoContactView.swift in Sources */,
 				C6FC44A029706F6700D3FA46 /* CoreDataContactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

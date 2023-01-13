@@ -16,14 +16,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(contacts) { contact in
-                    ZStack(alignment: .leading) {
-                        NavigationLink(destination: ContactDetailView(contact: contact)) {
-                            EmptyView()
+            ZStack {
+                if contacts.isEmpty {
+                    NoContactView()
+                } else {
+                    List {
+                        ForEach(contacts) { contact in
+                            ZStack(alignment: .leading) {
+                                NavigationLink(destination: ContactDetailView(contact: contact)) {
+                                    EmptyView()
+                                }
+                                .opacity(0)
+                                ContactRowView(contact: contact)
+                            }
                         }
-                        .opacity(0)
-                        ContactRowView(contact: contact)
                     }
                 }
             }
@@ -52,9 +58,14 @@ struct ContentView_Previews: PreviewProvider {
         let preview = ContactsProvider.shared
         ContentView(provider: preview)
             .environment(\.managedObjectContext, preview.viewContext)
-            .previewDisplayName("Contats with Data")
+            .previewDisplayName("Contacts with Data")
             .onAppear {
                 Contact.makePreview(count: 10, in: preview.viewContext)
             }
+        
+        let emptyPreview = ContactsProvider.shared
+        ContentView(provider: emptyPreview)
+            .environment(\.managedObjectContext, emptyPreview.viewContext)
+            .previewDisplayName("Contacts without Data")
     }
 }
