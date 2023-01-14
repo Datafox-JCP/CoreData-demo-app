@@ -17,12 +17,18 @@ struct SearchConfig: Equatable {
     var filter: Filter = .all
 }
 
+enum Sort {
+    case asc, desc
+}
+
 struct ContentView: View {
     
     @FetchRequest(fetchRequest: Contact.all()) private var contacts
     
     @State private var contactToEdit: Contact?
     @State private var searchConfig: SearchConfig = .init()
+    @State private var sort: Sort = .asc
+    
     var provider = ContactsProvider.shared
     
     var body: some View {
@@ -86,6 +92,17 @@ struct ContentView: View {
                                 Text("Filter Favorites")
                             }
                         }
+                        
+                        Section {
+                            Text("Sort")
+                            Picker(selection: $sort) {
+                                Label("Asc", systemImage: "arrow.up").tag(Sort.asc)
+                                Label("Desc", systemImage: "arrow.down").tag(Sort.desc)
+                            } label: {
+                                Text("Sort By")
+                            }
+                        }
+                        
                     } label: {
                         Image(systemName: "ellipsis")
                             .symbolVariant(.circle)
@@ -103,6 +120,9 @@ struct ContentView: View {
             .navigationTitle("Contacts")
             .onChange(of: searchConfig) { newConfig in
                 contacts.nsPredicate = Contact.filter(width: newConfig)
+            }
+            .onChange(of: sort) { newSort in
+                contacts.nsSortDescriptors = Contact.sort(order: newSort)
             }
         }
     }
